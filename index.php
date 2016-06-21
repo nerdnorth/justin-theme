@@ -62,7 +62,7 @@
   <?php } ?>
   <?php if(is_home()) { query_posts('posts_per_page=-1'); } while (have_posts()) : the_post(); ?>
   <?php if (is_page()) { ?>
-  <small><strong>&#8592 <a href="<?php echo home_url(); ?>"><?php echo $bback; ?></a></strong></small>
+  <small><strong>&#8592 <a href="<?php echo home_url(); ?>"><?php echo $back; ?></a></strong></small>
   <h2>
     <?php the_title(); ?>
   </h2>
@@ -74,7 +74,7 @@
   </p>
   <?php the_content(); edit_post_link('edit', ' <span class="edit">', '</span>'); ?>
   <?php } elseif (is_single()) { ?>
-  <small><strong>&#8592 <a href="<?php echo home_url(); ?>"><?php echo $bback; ?></a></strong></small>
+  <small><strong>&#8592 <a href="<?php echo home_url(); ?>"><?php echo $back; ?></a></strong></small>
   <h2 class="red">
     <?php if(is_single() || is_page()) { the_title(); } else { ?>
     <a href="<?php the_permalink(); ?>">
@@ -116,7 +116,6 @@
     <?php wp_nav_menu( array( 'theme_location' => 'footer-menu' ) ); ?>
   </p>
   <?php } ?>
-  <a href="http://www.notey.com/profile/mijustin#blog/6f3bb70cea3393b0c3d9187d9d10cc88"></a>
 </footer>
 <?php wp_footer(); ?>
 
